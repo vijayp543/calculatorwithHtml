@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+/*background: lightblue; */
+height : 30rem;
+display : grid;
+justify-content : center ;
+align-items: center;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+   
+    
+ 
+ .calculator{
+    
+    color: hsl(202, 11%, 29%); /* Text color for calculator */
+
+    max-inline-size: 22rem;  /* This is the Logical Property for max-width and has very good browser support */
+    border-radius: 10px; /* Round the edges */
+    overflow: hidden;  /* don't let other elements go outside the calculator */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12); /* Give the calculator some depth off the page */
+}
+
+
+ .calculator__output {
+    background: hsl(207, 19%, 61%);
+    
+   /* background: hsl(255, 100%, 100%); /* Background color to white */
+  padding-block-start: 2rem; /* Add white space above the output text */
+  padding-inline-end: 1.25rem; /* Add a little more padding to the right side of the text */
+
+  font-size:2rem;
+  text-align:end;
+ /* background: hsl(202, 11%, 29%); /* background color */
+  /* color: hsl(255, 100%, 100%); /* text color */
+ /* padding-block-start: 0.25rem; /* Logical Property for padding-top */
+  padding-block-end: 0.25rem; /* Logical Property for padding-bottom */
+  /*padding-inline-end: 0.75rem; /* Logical Property for padding-right */
+
+ }
+ .calculator__keys{
+    background: hsl(207, 19%, 61%);
+    
+    /*background: hsl(255, 100%, 100%); /* Background behind the keys to white */
+
+    padding: 0.5rem; /* Add some whitespace around the keys */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1px;
+   /* background: hsl(208, 24%, 74%); */
+}
+
+
+.calculator__key{
+
+  background: hsl(206, 14%, 41%); /* Change the keys to a darker gray */
+  color: hsl(255, 100%, 100%); /* Change the text color to white */
+  border: none; 
+
+  padding-block-start: 0.5rem; /* Logical Property for padding-top */
+  padding-block-end: 0.5rem; /* Logical Property for padding-bottom */
+  padding-inline-start: 1.25rem; /* Logical Property for padding-left */
+  padding-inline-end: 1.25rem; /* Logical Property for padding-right */
+  font-size: 1.5rem;  
+  /* Playful Styles: */
+  inline-size: 60px;
+  block-size: 60px;
+  border-radius: 40px;
+
+}
+.calculator__key:active,
+.calculator__key:focus {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3) inset;
+  outline: none;
+}
+
+.calculator__key--operator {
+
+    background:hsl(208, 25%, 86%)
+
+}
+.calculator__key--operator:active {
+  background: hsl(208, 24%, 80%);
+}
+
+.calculator__key--enter{
+grid-column: 4/5 ;
+grid-row: 2 / span 4;
+background: hsl(357, 100%, 72%);
+height: auto; /* Allow the key to span the four rows */
+
+}  
+</style>
+<!-- the calculator we can see in Dark mode 
+    .calculator__output {
+  background: hsl(207, 19%, 61%); /* Change the background to a dark gray */
+}
+.calculator__keys {
+  background: hsl(207, 19%, 61%); /* Change the background to a dark gray */
+}
+.calculator__key {
+  background: hsl(206, 14%, 41%); /* Change the keys to a darker gray */
+  color: hsl(255, 100%, 100%); /* Change the text color to white */
+}   -->
+
+
+
+</head>
+
+<body  class = "cal">
+<div class="calculator" > 
+    <div class = "calculator__output"> 0 </div>
+    <div class = "calculator__keys" > 
+    <!-- claculator output and keys go here -->
+<button class = "calculator__key calculator__key--operator"> + </button>
+<button class = "calculator__key calculator__key--operator"> - </button>
+<button class = "calculator__key calculator__key--operator">&times;</button>
+<button class = "calculator__key calculator__key--operator "> % </button>
+<button class = "calculator__key"> 7</button>
+<button class = "calculator__key"> 8</button>
+<button class = "calculator__key"> 9</button>
+<button class = "calculator__key"> 4</button>
+<button class = "calculator__key"> 5</button>
+<button class = "calculator__key"> 6</button>
+<button class = "calculator__key"> 1</button>
+<button class = "calculator__key"> 2</button>
+<button class = "calculator__key"> 3</button>
+<button class = "calculator__key"> 0</button>
+<button class = "calculator__key"> . </button>
+<button class = "calculator__key">  AC </button>
+
+<button class = "calculator__key calculator__key--enter"> = </button>
+
+
+
+    </div> 
+</div>
+
+
+
+
+
+
+</body>
+</html>
